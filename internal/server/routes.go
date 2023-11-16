@@ -4,14 +4,16 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func (s *FiberServer) RegisterFiberRoutes() {
-	s.App.Get("/", s.helloWorldHandler)
+func RegisterFiberRoutes(app *fiber.App) {
+	app.Get("/ping", handleGetHealth)
+
+	app.Get("/", handleGetIndex)
 }
 
-func (s *FiberServer) helloWorldHandler(c *fiber.Ctx) error {
-	resp := map[string]string{
-		"message": "Hello World",
-	}
+func handleGetIndex(c *fiber.Ctx) error {
+	return c.Render("index", nil)
+}
 
-	return c.JSON(resp)
+func handleGetHealth(c *fiber.Ctx) error {
+	return c.SendString("pong!")
 }

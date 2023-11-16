@@ -1,15 +1,16 @@
 package server
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/template/html/v2"
+)
 
-type FiberServer struct {
-	*fiber.App
-}
+func New() *fiber.App {
+	engine := html.New("./views", ".html")
 
-func New() *FiberServer {
-	server := &FiberServer{
-		App: fiber.New(),
-	}
+	server := fiber.New(fiber.Config{
+		Views: engine,
+	})
 
 	return server
 }

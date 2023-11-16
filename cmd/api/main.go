@@ -1,17 +1,15 @@
 package main
 
 import (
+	"log"
 	"personal-site/internal/server"
 )
 
 func main() {
 
-	server := server.New()
+	app := server.New()
 
-	server.RegisterFiberRoutes()
+	server.RegisterFiberRoutes(app)
 
-	err := server.Listen(":8080")
-	if err != nil {
-		panic("cannot start server")
-	}
+	log.Fatalf("Server Closed: %v", app.Listen(":8080"))
 }
