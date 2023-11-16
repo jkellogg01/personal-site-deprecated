@@ -6,7 +6,7 @@ import (
 )
 
 func New() *fiber.App {
-	engine := html.New("./views", ".html")
+	engine := html.New("./src/views", ".html")
 
 	server := fiber.New(fiber.Config{
 		Views: engine,

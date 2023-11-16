@@ -5,6 +5,8 @@ import (
 )
 
 func RegisterFiberRoutes(app *fiber.App) {
+	app.Static("/dist", "./dist")
+
 	app.Get("/ping", handleGetHealth)
 
 	app.Get("/", handleGetIndex)
