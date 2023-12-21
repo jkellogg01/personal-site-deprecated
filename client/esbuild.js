@@ -1,4 +1,4 @@
-esbuild = require("esbuild");
+esbuild = require("@netlify/esbuild");
 
 console.log("Bundling...");
 esbuild

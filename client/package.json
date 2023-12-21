@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "esbuild": "^0.19.10",
+    "@netlify/esbuild": "^0.14.39-1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
