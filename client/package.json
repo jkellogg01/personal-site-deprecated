@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/main.tsx --bundle --outfile='../dist/app.js' && npx tailwindcss -i ./src/input.css -o ../dist/output.css",
+    "build": "./node_modules/.bin/esbuild src/main.tsx --bundle --outfile='../dist/app.js' && npx tailwindcss -i ./src/input.css -o ../dist/output.css",
     "dev": "concurrently 'esbuild src/main.tsx --bundle --outfile=../dist/app.js --watch' 'npx tailwindcss -i ./src/input.css -o ../dist/output.css --watch'"
   },
   "keywords": [],
