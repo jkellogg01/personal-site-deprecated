@@ -1,13 +1,19 @@
 import { Outlet } from "react-router-dom";
-import LeftBar from "./components/LeftBar";
-import RightBar from "./components/RightBar";
+import Nav from "./components/Nav";
+import Nameplate from "./components/Nameplate";
+import Profile from "./components/Profile";
 
 export default function App() {
   return (
     <div className="p-8 gap-4 flex flex-row justify-center items-start">
-      <LeftBar />
+      <div className="flex flex-col gap-4 max-w-xs">
+        <Nameplate />
+        <Nav />
+      </div>
       <Outlet />
-      <RightBar />
+      <div className="flex flex-col gap-4 max-w-xs">
+        <Profile />
+      </div>
     </div>
   );
 }
