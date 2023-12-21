@@ -5,11 +5,13 @@ import App from "./App.tsx";
 import "./index.css";
 import Home from "./pages/Home.tsx";
 import Projects from "./pages/Projects.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
