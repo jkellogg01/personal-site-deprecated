@@ -5,7 +5,11 @@
   "main": "src/main.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "bundle": "node esbuild.js",
+=======
+    "bundle": "node esbuild.mjs",
+>>>>>>> dbaace919d5ec8517478555e5e927d7369e0a443
     "tailwind": "npx tailwindcss -i ./src/input.css -o ../dist/output.css",
     "build": "npm run bundle && npm run tailwind"
   },
