@@ -1,6 +1,2 @@
 [build]
-<<<<<<< HEAD
 command = "make build"
-=======
-command = "make build"
->>>>>>> dbaace919d5ec8517478555e5e927d7369e0a443
