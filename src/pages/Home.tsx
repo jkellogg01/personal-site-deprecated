@@ -1,3 +1,5 @@
+import Article from "./Article";
+
 export default function Home() {
-  return "home page :)";
+  return <Article path="articles/sample-article.md" />;
 }
