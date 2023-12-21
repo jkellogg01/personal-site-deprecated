@@ -1,8 +1,8 @@
-dev:
-	@echo "as of 21DEC2023 this command only builds the react app!"
-	@cd client && npm run dev
+TARGET := server
 
-react: dist/app.js
+run: build
+	./bin/$(TARGET)
 
-dist/app.js:
-	@cd client && npm run build
+build:
+	@cd client; npm run build;
+	go build -C src -o ../bin/$(TARGET) main.go
