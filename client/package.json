@@ -5,7 +5,11 @@
   "main": "src/main.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
+    "bundle": "node esbuild.js",
+=======
     "bundle": "node esbuild.mjs",
+>>>>>>> dbaace919d5ec8517478555e5e927d7369e0a443
     "tailwind": "npx tailwindcss -i ./src/input.css -o ../dist/output.css",
     "build": "npm run bundle && npm run tailwind"
   },
@@ -13,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "esbuild": "^0.19.10",
+    "@netlify/esbuild": "^0.14.39-1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

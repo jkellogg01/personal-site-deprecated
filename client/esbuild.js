@@ -1,4 +1,4 @@
-import esbuild from "esbuild";
+esbuild = require("@netlify/esbuild");
 
 console.log("Bundling...");
 esbuild
